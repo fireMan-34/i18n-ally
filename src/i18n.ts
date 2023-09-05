@@ -15,6 +15,9 @@ export default class i18n {
   }
 
   static format(str: string, args: any[]) {
+    /** 知识补充
+     * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+     */
     return str.replace(/{(\d+)}/g, (match, number) => {
       return typeof args[number] !== 'undefined'
         ? args[number].toString()

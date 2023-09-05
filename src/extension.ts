@@ -13,7 +13,7 @@ export async function activate(ctx: ExtensionContext) {
 
   // * 挂载上下文
   Config.ctx = ctx
-  //* 初始化上下文路径 国家化功能
+  //* 初始化上下文路径 国际化 package json
   i18n.init(ctx.extensionPath)
   //* 国家化检测
   KeyDetector.init(ctx)
