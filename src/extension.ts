@@ -13,9 +13,9 @@ export async function activate(ctx: ExtensionContext) {
 
   // * 挂载上下文
   Config.ctx = ctx
-  //* 初始化上下文路径 国际化 package json
+  //* 初始化上下文路径 国际化 package json 主要是用于国际化解析
   i18n.init(ctx.extensionPath)
-  //* 国家化检测
+  //* 国际化检测
   KeyDetector.init(ctx)
 
   // 激活插件

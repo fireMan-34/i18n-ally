@@ -14,6 +14,7 @@ export interface KeyUsages {
   namespace?: string
 }
 
+/** 啃不动 留下了没有技术的泪水 ┭┮﹏┭┮ */
 export class KeyDetector {
   static getKeyByContent(text: string) {
     const keys = new Set<string>()
@@ -83,8 +84,10 @@ export class KeyDetector {
   }
 
   static init(ctx: ExtensionContext) {
+    // 监听文档
     workspace.onDidChangeTextDocument(
       (e) => {
+        // 删除缓存
         delete this._get_keys_cache[e.document.uri.fsPath]
       },
       null,
